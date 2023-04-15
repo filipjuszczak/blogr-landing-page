@@ -1,0 +1,247 @@
+@media (max-width: 375px) {
+  .header {
+    background: url('./images/bg-pattern-intro-mobile.svg'),
+      linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    background-position: 45% 52%;
+  }
+
+  .header__nav {
+    position: relative;
+    justify-content: space-between;
+    margin-bottom: 12rem;
+  }
+
+  .header__nav--left {
+    margin-left: 2.4rem;
+  }
+
+  .nav-link--heading {
+    margin-bottom: 2.4rem;
+  }
+
+  .nav__menu {
+    display: none;
+  }
+
+  .nav__menu--open {
+    display: block;
+    width: 90%;
+    min-height: 60vh;
+    position: absolute;
+    top: 150%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    padding: 3.2rem 0 0 0;
+    border-radius: 5px;
+    box-shadow: 0 10px 20px hsla(0, 0%, 0%, 0.1);
+    background-color: hsl(0, 0%, 100%);
+    z-index: 9999;
+  }
+
+  .btn--mobile {
+    display: block;
+    margin-bottom: 2.4rem;
+    font-size: 1.8rem;
+  }
+
+  .btn--mobile--sign-up:link,
+  .btn--mobile--sign-up:visited {
+    background: linear-gradient(
+      to right,
+      hsl(13, 100%, 72%),
+      hsl(353, 100%, 62%)
+    );
+    color: hsl(0, 0%, 100%);
+    transition: all 200ms;
+  }
+
+  .nav__icon[name='light-arrow'] {
+    display: none;
+  }
+
+  .nav__icon[name='dark-arrow'] {
+    display: block;
+  }
+
+  .nav__dropdown {
+    width: 80vw;
+    display: none;
+    position: static;
+    text-align: center;
+    background-color: hsla(240, 2%, 79%, 0.2);
+  }
+
+  .nav__dropdown--open {
+    display: block;
+  }
+
+  .nav__dropdown-link:link,
+  .nav__dropdown-link:visited {
+    display: block;
+    margin-bottom: 2.4rem;
+    font-size: 1.7rem;
+    color: hsla(208, 49%, 24%, 0.8);
+  }
+
+  .nav__dropdown-link:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .nav--left__nav-links {
+    width: 90%;
+    flex-direction: column;
+    gap: 2.4rem;
+    margin: 0 auto;
+    padding-bottom: 2.4rem;
+    border-bottom: 1px solid hsla(240, 2%, 79%, 0.2);
+    font-size: 2rem;
+    color: hsl(208, 49%, 24%);
+  }
+
+  .btn--mobile-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2.4rem;
+  }
+
+  .nav__btn:link,
+  .nav__btn:visited {
+    display: none;
+  }
+
+  .nav__btn--mobile {
+    display: block;
+    margin-right: 2.4rem;
+  }
+
+  .header__text-box {
+    width: 100%;
+  }
+
+  .header__heading {
+    padding: 0 3.8rem;
+    font-size: 3.2rem;
+    font-weight: 400;
+  }
+
+  .header__text {
+    padding: 0 3.8rem;
+    font-weight: 400;
+  }
+
+  .section-designed {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: 16rem;
+    padding-top: 8rem;
+  }
+
+  .section__main-heading {
+    padding-bottom: 4.2rem;
+    font-size: 2.6rem;
+    margin-bottom: 0;
+  }
+
+  .section__text-box {
+    width: 100%;
+    padding: 0 3.2rem;
+    text-align: center;
+  }
+
+  .section__description {
+    margin-bottom: 6rem;
+  }
+
+  .section__img-box {
+    grid-row: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2.8rem;
+  }
+
+  .editor-img--desktop {
+    display: none;
+  }
+
+  .editor-img--mobile {
+    width: 100%;
+    position: static;
+    display: block;
+  }
+
+  .section-state {
+    background-position: 55% -220%;
+    background-size: 150%;
+    margin-bottom: 6rem;
+  }
+
+  .section-state .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .section-state .section__img-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .app-img {
+    width: 70%;
+    transform: scale(1.5) translate(0, -25%);
+  }
+
+  .section-state .section__secondary-heading {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+
+  .section-state .section__description {
+    width: 100%;
+  }
+
+  .section-state .section__text-box {
+    margin-bottom: 9.2rem;
+  }
+
+  .laptop-img--desktop {
+    display: none;
+  }
+
+  .laptop-img--mobile {
+    display: block;
+  }
+
+  .section-features {
+    margin-bottom: 2rem;
+    padding-top: 0;
+  }
+
+  .section-features .section__description {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  .footer .container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .footer-logo-box {
+    margin-bottom: 4.8rem;
+  }
+
+  .footer__nav {
+    margin-bottom: 3.2rem;
+    text-align: center;
+  }
+
+  .footer-link:link,
+  .footer-link:visited {
+    width: 100%;
+    font-size: 1.8rem;
+  }
+}
