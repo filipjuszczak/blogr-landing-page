@@ -1,47 +1,35 @@
-const navLinkEls = document.querySelectorAll('.nav-link--heading');
-const arrowEls = document.querySelectorAll('.nav__icon');
-const dropdownEls = document.querySelectorAll('.nav__dropdown');
-const buttonEl = document.querySelector('.nav__btn--mobile');
-const menuEl = document.querySelector('.nav__menu');
+const navToggle = document.querySelector('.mobile-toggle');
+const navButtons = document.querySelectorAll('.nav__links__btn');
+const overlay = document.querySelector('.overlay');
 
-buttonEl.addEventListener('click', () => {
-  console.log('a');
-  menuEl.classList.toggle('nav__menu--open');
-});
-
-function closeOpenDropdowns() {
-  dropdownEls.forEach((el) => {
-    el.classList.remove('nav__dropdown--open');
+function closeDropdowns() {
+  const dropdowns = document.querySelectorAll('.nav__dropdown');
+  navButtons.forEach((button) => {
+    button.setAttribute('aria-expanded', false);
+  });
+  dropdowns.forEach((dropdown) => {
+    dropdown.setAttribute('aria-hidden', true);
   });
 }
 
-function flipArrow() {
-  arrowEls.forEach((el) => {
-    el.classList.remove('nav__icon--open');
-  });
-}
-
-navLinkEls.forEach((el) => {
-  el.addEventListener('click', (e) => {
-    e.preventDefault();
-    const arrows = el.parentElement.querySelectorAll('.nav__icon');
-    const dropdownEl = el.parentElement.querySelector('.nav__dropdown');
-    const shouldOpen = !dropdownEl.classList.contains('nav__dropdown--open');
-    closeOpenDropdowns();
-    flipArrow();
-    if (shouldOpen) {
-      arrows.forEach((el) => {
-        el.classList.add('nav__icon--open');
-      });
-      dropdownEl.classList.add('nav__dropdown--open');
-    }
-    e.stopPropagation();
-  });
-});
-
-window.addEventListener('click', (e) => {
-  if (e.target != navLinkEls) {
-    closeOpenDropdowns();
-    flipArrow();
+navToggle.addEventListener('click', () => {
+  const navVisibility = navToggle.getAttribute('data-nav-expanded');
+  if (navVisibility === 'false') {
+    navToggle.setAttribute('data-nav-expanded', true);
+    overlay.setAttribute('data-visible', true);
+  } else {
+    navToggle.setAttribute('data-nav-expanded', false);
+    overlay.setAttribute('data-visible', false);
   }
+});
+
+navButtons.forEach((button) => {
+  button.addEventListener('click', () => {
+    const isExpanded = button.getAttribute('aria-expanded');
+    if (isExpanded === 'false') {
+      button.setAttribute('aria-expanded', true);
+    } else {
+      button.setAttribute('aria-expanded', false);
+    }
+  });
 });
